@@ -31,9 +31,9 @@ void inorder(int node, char T[]){
         return;
     }
     else{
-        preorder((node*2)+1, T);
+        inorder((node*2)+1, T);
         cout << T[node] << " ";
-        preorder((node*2)+2, T);
+        inorder((node*2)+2, T);
     }
 }
 void postorder(int node, char T[]){
@@ -41,8 +41,8 @@ void postorder(int node, char T[]){
         return;
     }
     else{
-        preorder((node*2)+1, T);
-        preorder((node*2)+2, T);
+        postorder((node*2)+1, T);
+        postorder((node*2)+2, T);
         cout << T[node] << " ";
     }
 }
